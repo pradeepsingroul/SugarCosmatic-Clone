@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart_page</title>
+   <style>
+    #cart_container{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+    gap: 30px;
+    
+    margin-top: 30px;
+}
+#cart_container>div{
+   background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   padding: 0px 0px 20px 0px;
+}
+#cart_container>div>img{
+   height: 70%;
+   width: 100%;
+}
+#cart_container>div>p{
+    font-family: sans-serif;
+  
+    font-weight: bold;
+    text-align: center;
+}
+#cart_container>div>div{
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    justify-content: center;
+} 
+#cart_container>div>div>:nth-child(1){
+   height: 30px;
+}
+span{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(218, 0, 0);
+}
+button{
+    height: 8%;
+    width: 100%;
+    font-size: 20px;
+    color: aliceblue;
+    background-color: black;
+   
+   
+}
+button:hover{
+    background-color: cornflowerblue;
+    color: black;
+}
+#showvalue{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-around;
+   
+}
+#showvalue>div{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+  
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(236, 195, 17);
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#navbar>div{
+    margin-left: 10px;
+
+}
+#navbar>div:nth-child(1){
+    width: 18%;
+}
+#navbar>div:nth-child(1)>img{
+    width: 100%;
+    height: 100%;
+}
+#navbar{
+    display: flex;
+    height: 80px;
+    background-color: white;
+    width: 100%;
+}
+
+#search{
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+#search>input{
+    border: none;
+    font-size: 22px;
+    background-color: rgb(238, 234, 229);
+    height: 60%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 80%;
+}
+#search>div{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+   color: white;
+   background-color: black;
+   height: 60%;
+   width: 20%;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+   
+}
+#login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:20% ;
+    
+   
+}
+#login>div>img{
+    height: 30px;
+    width: 30px;
+   
+}
+#login>a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+}
+#lowernav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+   
+    height: 80px;
+    margin-top: 10px;
+}
+#lowernav>a{
+    background-color: rgb(244, 244, 238);
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7%;
+    border-radius: 5px;
+    margin-left: 20px;
+    color: black;
+  
+    text-decoration: none;
+   
+}
+#lowernav>a:hover{
+    background-color: rgb(238, 196, 43);
+    cursor: pointer;
+    height: 40px;
+    width: 7%;
+    
+}
+#mainnavbar{
+   
+    width: 100%;
+    position: sticky;
+    background-color: white;
+    box-shadow: rgba(43, 43, 170, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: rgb(231, 228, 224);
+}
+
+    #wishlist{
+        display: flex;
+        width: 8%;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #wishlist>img{
+        height: 30px;
+        width:30px;     
+    }
+    #wishlist>a>img{
+        height: 30px;
+        width: 30px;
+    }
+    #wishlist>a>img:hover{
+        height: 40px;
+        width: 40px;
+    }
+    #home>a>img{
+        height: 40px;
+        width: 40px;
+    }
+    #home{
+        display: flex;
+        margin-left: -10px;
+        align-items: center;
+    }
+    #home>a>img:hover{
+        height: 48px;
+        width: 48px;
+    }
+   </style>
+</head>
+<body>
+    <div id="mainnavbar">
+        <div id="navbar">
+            <div>
+                <img src="https://in.sugarcosmetics.com/desc-images/pride-logo-option.gif" alt="">
+            </div>
+            <div id="search">
+                <input type="text" placeholder="search here">
+                <div>Search</div>
+            </div>
+            <div id="login">
+                <div>
+                    <img src="https://cdn-icons-png.flaticon.com/128/64/64572.png" alt=""a>
+                </div>
+                <a href="login.html">login</a>/<a href="resister.html">Resister</a>
+            </div>
+            <div id="home">
+                <a href="index.html"><img src="https://t4.ftcdn.net/jpg/00/97/00/07/240_F_97000769_R4zepLTgmf8G22W7G2o8JA1HeiVK2CkK.jpg" alt=""></a>
+            </div>
+            <div id="wishlist">
+            
+                <a href="wishlist.html"><img src="https://cdn-icons.flaticon.com/png/128/4240/premium/4240564.png?token=exp=1655445895~hmac=1d5ad7b52131a3bff8666b7cac4318b7" alt=""></a>
+                <a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/128/253/253298.png" alt=""></a>
+                <img src="https://cdn-icons-png.flaticon.com/128/879/879859.png" alt="">
+          
+            </div>
+        </div>
+    <div id="lowernav">
+           
+            <a href="makeup.html"><div>MAKEUP</div></a>
+            <a href="brushes.html"><div>BRUSHES</div></a>
+            <a href="skincare.html"><div>SKINCARE</div></a>
+            <a href="tending.html"><div>TENDING</div></a>
+            <a href=""><div>BLOG</div></a>
+            <a href="products.html"><div>OFFERS</div></a>
+            <a href="store.html"> <div>STORE</div></a>
+         
+    </div>
+</div>
+    <h1>CARTS</h1>
+    <div id="showvalue">
+        <div></div>
+        <div></div>
+    </div>
+    <div id="cart_container">
+
+    </div>
+    
+    
+</body>
+</html>
+<script>
+
+
+var countarray = JSON.parse(localStorage.getItem("added_data"))
+console.log(countarray)
+var  count = countarray.length
+var price = 0
+
+countarray.forEach(function(element){
+  price+=element.price
+})
+
+var divarr = document.querySelectorAll("#showvalue>div")
+
+divarr[0].innerText="Number of items"+"-"+count
+divarr[1].innerText="Total price"+"-"+"₹"+price
+
+
+
+var cart_arr = JSON.parse(localStorage.getItem("added_data"))
+
+    cart_arr.forEach(function(element){
+    var div = document.createElement("div")
+
+    var img  = document.createElement("img")
+    img.src=element.avatar
+    var ptag = document.createElement("p")
+    ptag.innerText=element.ptag
+    var price_p = document.createElement("p")
+    price_p.innerText="₹"+" "+element.price
+    
+    var div2 = document.createElement("div")
+    var img2 = document.createElement("img")
+    img2.src = element.starimage
+    var span2 = document.createElement("span")
+    span2.innerText=element.rating
+    var span3 = document.createElement("span")
+    span3.innerText=element.peoples
+
+    var btn = document.createElement("button")
+    btn.innerText="DELETE"
+    btn.addEventListener("click",function(index){
+        delete_function(index)
+    })
+    div2.append(img2,span2,span3)
+
+    div.append(img,ptag,price_p,div2,btn)
+    document.querySelector("#cart_container").append(div)
+})
+
+
+
+function delete_function(index){
+    cart_arr.splice(index,1)
+    localStorage.setItem("added_data",JSON.stringify(cart_arr))
+    window.location.reload()
+
+}
+
+</script>

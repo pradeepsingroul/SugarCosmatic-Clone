@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>makeup</title>
+   <style>
+    #lips_upper_img{
+           
+           height: 400px;
+           width: 80%;
+           margin: auto;
+           margin-bottom: 30px;
+       }
+       #lips_upper_img>img{
+           height: 100%;
+           width: 100%;
+       }
+       #makeup{
+           box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+           height: 80px;
+           width: 93%;
+           display: flex;
+           background-color: aliceblue;
+           margin: auto;
+           align-items: center;
+           padding: 0px 15px 0px 15px;
+           justify-content: space-between;
+       }
+       #makeup>div{
+         
+           height: 80%;
+           width: 30%;
+           
+       }
+       #makeup>div>div{
+        
+           height: 40%;
+           display: flex;
+           align-items: center;
+       }
+       #makeup>div>div>img{
+          height: 35px;
+       }
+       #makeup>div>div>p{
+        font-weight: bold;
+       }
+       #makeup>div>p{
+           font-weight: bold;
+          font-size: 20px;
+          margin-top: 10px
+       }
+       #makeup2{
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+       
+       }
+       
+       #filter{
+           
+           height: 32px;
+           font-size: 20px;
+          
+       }
+       #sort{
+           height: 32px;
+          
+           font-size: 20px;
+          
+       }
+       body{
+           background-color: rgb(202, 196, 196);
+       }
+       #container{
+           width: 95%;
+           margin: auto;
+           display: grid;
+           grid-template-columns: repeat(4,1fr);
+           
+           gap: 30px;
+          
+           margin-top: 30px;
+       }
+       #container>div{
+          background-color: white;
+           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          padding: 0px 0px020px 0px;
+       }
+       #container>div>img{
+          height: 70%;
+          width: 100%;
+       }
+       #container>div>p{
+           font-family: sans-serif;
+         
+           font-weight: bold;
+           text-align: center;
+       }
+       #container>div>div{
+           display: flex;
+           align-items: center;
+           margin-top: -10px;
+           justify-content: center;
+       } 
+       #container>div>div>:nth-child(1){
+          height: 30px;
+       }
+       span{
+           margin-left: 10px;
+           font-weight: bold;
+           font-size: 20px;
+           color: rgb(218, 0, 0);
+       }
+       button{
+           height: 8%;
+           width: 100%;
+           font-size: 20px;
+           color: aliceblue;
+           background-color: black;
+           
+          
+       }
+       button:hover{
+           background-color: cornflowerblue;
+           color: black;
+       }
+       @media all and (min-width:550px) and (max-width:720px)
+       {
+           #container{
+           grid-template-columns: repeat(3,1fr);
+           grid-template-rows: repeat(15,700px);
+       }
+       
+       } 
+       
+       h1{
+           text-align: center;
+           font-size: 50px;
+           font-family: 'Courier New', Courier, monospace;
+       }
+       #navbar>div{
+           margin-left: 10px;
+       
+       }
+       #navbar>div:nth-child(1){
+           width: 18%;
+       }
+       #navbar>div:nth-child(1)>img{
+           width: 100%;
+           height: 100%;
+       }
+       #navbar{
+           display: flex;
+           height: 80px;
+           background-color: white;
+           width: 100%;
+       }
+       
+       #search{
+           display: flex;
+           width: 50%;
+           align-items: center;
+       }
+       #search>input{
+           border: none;
+           font-size: 22px;
+           background-color: rgb(238, 234, 229);
+           height: 60%;
+           border-top-left-radius: 10px;
+           border-bottom-left-radius: 10px;
+           width: 80%;
+       }
+       #search>div{
+           display: flex;
+           align-items: center;
+           font-size: 30px;
+          color: white;
+          background-color: black;
+          height: 60%;
+          width: 20%;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+          
+       }
+       #login{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           width:20% ;
+           
+          
+       }
+       #login>div>img{
+           height: 30px;
+           width: 30px;
+          
+       }
+       #login>a{
+           text-decoration: none;
+           font-size: 25px;
+           color: black;
+       }
+       #lowernav{
+           display: flex;
+           align-items: center;
+           width: 100%;
+          
+           height: 80px;
+           margin-top: 10px;
+       }
+       #lowernav>a{
+           background-color: rgb(244, 244, 238);
+           height: 30px;
+           font-size: 20px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           width: 7%;
+           border-radius: 5px;
+           margin-left: 20px;
+           color: black;
+         
+           text-decoration: none;
+          
+       }
+       #lowernav>a:hover{
+           background-color: rgb(238, 196, 43);
+           cursor: pointer;
+           height: 40px;
+           width: 7%;
+           
+       }
+       #mainnavbar{
+          
+           width: 100%;
+           position: sticky;
+           background-color: white;
+           box-shadow: rgba(43, 43, 170, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+           background-color: rgb(231, 228, 224);
+       }
+       
+           #wishlist{
+               display: flex;
+               width: 8%;
+               align-items: center;
+               justify-content: space-around;
+           }
+           #wishlist>img{
+               height: 30px;
+               width:30px;     
+           }
+           #wishlist>a>img{
+               height: 30px;
+               width: 30px;
+           }
+           #wishlist>a>img:hover{
+               height: 40px;
+               width: 40px;
+           }
+           #home>a>img{
+               height: 40px;
+               width: 40px;
+           }
+           #home{
+               display: flex;
+               margin-left: -10px;
+               align-items: center;
+           }
+           #home>a>img:hover{
+               height: 48px;
+               width: 48px;
+           }
+   </style>
+</head>
+<body>
+    <div id="mainnavbar">
+        <div id="navbar">
+            <div>
+                <img src="https://in.sugarcosmetics.com/desc-images/pride-logo-option.gif" alt="">
+            </div>
+            <div id="search">
+                <input type="text" placeholder="search here">
+                <div>Search</div>
+            </div>
+            <div id="login">
+                <div>
+                    <img src="https://cdn-icons-png.flaticon.com/128/64/64572.png" alt=""a>
+                </div>
+                <a href="login.html">login</a>/<a href="resister.html">Resister</a>
+            </div>
+            <div id="home">
+                <a href="index.html"><img src="https://t4.ftcdn.net/jpg/00/97/00/07/240_F_97000769_R4zepLTgmf8G22W7G2o8JA1HeiVK2CkK.jpg" alt=""></a>
+            </div>
+            <div id="wishlist">
+            
+                <a href="wishlist.html"><img src="https://cdn-icons.flaticon.com/png/128/4240/premium/4240564.png?token=exp=1655445895~hmac=1d5ad7b52131a3bff8666b7cac4318b7" alt=""></a>
+                <a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/128/253/253298.png" alt=""></a>
+                <img src="https://cdn-icons-png.flaticon.com/128/879/879859.png" alt="">
+          
+            </div>
+        </div>
+    <div id="lowernav">
+            
+            <a href="makeup.html"><div>MAKEUP</div></a>
+            <a href="brushes.html"><div>BRUSHES</div></a>
+            <a href="skincare.html"><div>SKINCARE</div></a>
+            <a href="tending.html"><div>TENDING</div></a>
+            <a href=""><div>BLOG</div></a>
+            <a href="products.html"><div>OFFERS</div></a>
+            <a href="store.html"> <div>STORE</div></a>
+         
+    </div>
+</div>
+    <h1>MAKEUP</h1>
+    <div id="lips_upper_img">
+        <img src="https://d32baadbbpueqt.cloudfront.net/Collection/6a68d77f-80b5-4860-9a4d-6005844c937d.jpg" alt="">
+    </div>
+    <div id="makeup">
+
+        <div>
+            <div>
+                <img src="https://t4.ftcdn.net/jpg/00/97/00/07/240_F_97000769_R4zepLTgmf8G22W7G2o8JA1HeiVK2CkK.jpg" alt="">
+                <p>/Makeup</p>
+            </div>
+            <p> Makeup - 56 items</p>
+        </div>
+        <div id="makeup2">
+           <div>
+                <img src="https://cdn-icons-png.flaticon.com/128/57/57164.png" alt="">
+               <select name="" id="filter">
+                <option value="All">All  product</option>
+                <option value="kajal">Kajal</option>
+                <option value="eye liner">Eye liner</option>
+                <option value="lip liner">lips liner</option>
+                <option value="powder">Powder</option>
+                <option value="lipstick">Lipstick</option>
+                <option value="liquid lipstick">Liquid lipstick</option>
+               </select>
+           </div>
+           <div>
+                <img src="https://cdn-icons-png.flaticon.com/128/565/565341.png" alt="">
+                <select name="" id="sort" onChange="sortfunction()">
+                    <option value="All">Sort</option>
+                    <option value="All">Relevance</option>
+                    <option value="high">Price - high to low</option>
+                    <option value="low">Price - low to high</option>
+                   </select>
+             </div>
+        </div>
+    </div>
+    <div id="container">
+
+
+    </div> 
+    <a href="cart.html">cart oage</a>
+  
+</body>
+</html>
+<script>
+ 
+var arr_of_obj=[
+    {category:"kajal",productId:"makeup1",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/1_6f55bcac-3e42-4253-88ee-cec0fa43c62a.jpg?v=1645608270",ptag:"Matte Attack Transferproof Lipstick",price:699,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(428)"},
+    {category:"kajal",productId:"makeup2",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/AirKissPowderPoweredByImagesArtboard1.jpg?v=1644813116",ptag:"Air Kiss Powder Lipstick",price:499,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(53)"},
+    {category:"kajal",productId:"makeup3",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/01_d6ffec78-c2b6-4466-8672-233fee0285a8.jpg?v=1644394232",ptag:"Matte As Hell Crayon Lipstick",price:799,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(945)"},
+    {category:"kajal",productId:"makeup4", avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/1_529c20ee-c872-4029-9702-8580d7b9a66f.jpg?v=1640178644",ptag:"Ace Of Face Foundation Stick",price:999,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(569)"    },
+    {category:"kajal",productId:"makeup5",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/1_1da9dee5-9c2e-4135-994c-9b7d2ca23e6b.jpg?v=1641915296",ptag:"Nothing Else Matter Longwear Lipstick",price:499,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(188)"},
+    {category:"kajal",productId:"makeup6",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/1_6f55bcac-3e42-4253-88ee-cec0fa43c62a.jpg?v=1645608270",ptag:"Matte Attack Transferproof Lipstick",price:699,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(428)"},
+    {category:"eye liner",productId:"makeup7",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/AirKissPowderPoweredByImagesArtboard1.jpg?v=1644813116",ptag:"Air Kiss Powder Lipstick",price:499,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(53)"},
+    {category:"eye liner",productId:"makeup8",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/01_5e8187e3-f7a2-40aa-a759-d4bf69769234.jpg?v=1639496327",ptag:"Kohl Of Honour Intense Kajal - 01 Black Out",price:249,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(97)"},
+    {category:"eye liner",productId:"makeup9", avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/1_ef579f2e-602e-4d2f-bed2-bf0efdf4f184.jpg?v=1644325813",ptag:"Smudge Me Not Liquid Lipstick",price:499,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(352)"    },
+    {category:"eye liner",productId:"makeup10",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-bling-leader-illuminating-moisturizer-13644982681683.jpg?v=1619115847",ptag:"Smudge Me Not Liquid Lipstick",price:499,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(143)"},
+    {category:"eye liner",productId:"makeup11",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/1_51afaa84-af89-42b5-bdb8-a51b01257bc0.jpg?v=1639582607",ptag:"Contour De Force Face Palette",price:799,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(318)"},
+    {category:"eye liner",productId:"makeup12",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/01_59809bd6-49ef-4c6b-b262-47002bedc963.jpg?v=1639755559",ptag:"Blend The Rules Eyeshadow Palette",price:1199,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(96)"},
+    {category:"eye liner",productId:"makeup13",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-bronzer-01-taupe-topper-cool-toned-brown-gray-undertone-11020228624467.jpg?v=1619102678",ptag:"Contour De Force Mini Bronzer",price:399,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(73)"},
+    {category:"eye liner",productId:"makeup14", avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-mettle-satin-lipstick-01-sophie-bright-fuchsia-pink-fuchsia-13706258088019.jpg?v=1619116113",ptag:"Mettle Satin Lipstick",price:999,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(169)"    },
+    {category:"lipstick",productId:"makeup15",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-blush-01-peach-peak-soft-peach-pink-11020203884627.jpg?v=1619102626",ptag:"Contour De Force Mini Blush",price:349,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(148)"},
+    {category:"lipstick",productId:"makeup16",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-dream-cover-spf15-mattifying-compact-10-latte-12775602356307.jpg?v=1619106501",ptag:"Dream Cover SPF15 Mattifying Compact",price:499,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(228)"},
+    {category:"lipstick",productId:"makeup17",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/1_df1e9403-ae9d-430c-8226-622d21c4743d.jpg?v=1640676422",ptag:"Arch Arrival Brow Definer",price:499,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(167)"},
+    {category:"lipstick",productId:"makeup18",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-gloss-boss-24hr-eyeliner-01-back-in-black-black-12771395436627_a805d7b4-0863-4ae0-9f15-a2292ae9aa93.jpg?v=1632210594",ptag:"Gloss Boss 24HR Eyeliner - 01 Back In Black (Black)",price:499,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(23)"},
+    {category:"lipstick",productId:"makeup19", avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-goddess-of-flawless-spf30-bb-cream-07-vanilla-latte-fair-12796432941139.jpg?v=1619114695",ptag:"Goddess Of Flawless SPF30+ BB Cream",price:699,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(119)"    },
+    {category:"lipstick",productId:"makeup21",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-uptown-curl-lengthening-mascara-01-black-beauty-black-28122637828179.jpg?v=1619106532",ptag:"Uptown Curl Lengthening Mascara - 01 Black Beauty",price:499,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(81)"},
+    {category:"lipstick",productId:"makeup22",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/1_e9355d54-6ddb-4aa4-bdfc-176a676db886.jpg?v=1639983555",ptag:"Base Of Glory Pore Minimizing Primer",price:799,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(269)"},
+    {category:"liquid lipstick",productId:"makeup23",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-eye-warned-you-so-double-matte-eyeliner-01-black-swan-black-13954562654291.jpg?v=1619116881",ptag:"Eye Warned You So! Double Matte Eyeliner",price:699,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(57)"},
+    {category:"liquid lipstick",productId:"makeup24",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/10_399a571c-c091-4d1c-bc17-111b7da9cd4e.jpg?v=1648741253",ptag:"Set The Tone Tinted Powder",price:769,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(75)"},
+    {category:"liquid lipstick",productId:"makeup25", avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-smudge-me-not-lip-duo-01-brazen-raisin-burgundy-13200661643347.jpg?v=1619108721",ptag:"Smudge Me Not Lip Duos",price:599,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.5,peoples:"(38)"    },
+    {category:"powder",productId:"makeup26",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-it-s-a-pout-time-vivid-lipstick-01-the-big-bang-berry-wine-13204815937619.jpg?v=1619100487",ptag:"It's A-pout Time! Vivid Lipstick",price:359,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(481)"},
+    {category:"powder",productId:"makeup27",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-all-set-to-go-banana-powder-13289662218323.jpg?v=1619115199",ptag:"All Set To Go Banana Powder",price:599,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(142)"},
+    {category:"powder",productId:"makeup28",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/382512089-mettle-priming-balm-01.jpg?v=1648654861",ptag:"The Most Eligiblur Correcting Primer - 03",price:1099,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(553)"},
+    {category:"powder",productId:"makeup29",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-lipping-on-the-edge-lip-liner-01-taffeta-terracotta-13278188568659.jpg?v=1619109027",ptag:"Lipping On The Edge Lip Liner",price:499,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(57)"},
+    {category:"powder",productId:"makeup30", avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-the-most-eligiblur-smoothing-primer-28122626162771.jpg?v=1619115330",ptag:"The Most Eligiblur Smoothing Primer",price:799,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(69)"    },
+    {category:"powder",productId:"makeup31",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-mettle-liquid-lipstick-01-lyra-cool-toned-plum-13200549380179.jpg?v=1619110238",ptag:"Mettle Liquid Lipstick",price:599,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.9,peoples:"(78)"},
+    {category:"lip liner",productId:"makeup32",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-contour-de-force-mini-blush-02-pink-pinnacle-deep-rose-12785043669075.jpg?v=1619102659",ptag:"Contour De Force Mini Blush - 02 Pink Pinnacle",price:349,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:5,peoples:"(6)"},
+    {category:"lip liner",productId:"makeup33",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/2_d5e8f5f6-db6f-43d4-a1ac-1da7b22fdc1b.jpg?v=1652943021",ptag:"The Most Eligiblur Correcting Primer",price:799,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:5,peoples:"(1)"},
+    {category:"lip liner",productId:"makeup34",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/1CREATIVEIMAGE01.jpg?v=1639496051",ptag:"Born To Wing Gel Eyeliner",price:599,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(137)"},
+    {category:"lip liner",productId:"makeup35", avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-seal-the-show-lip-primer-14162590433363.jpg?v=1619106825",ptag:"Seal The Show Lip Primer",price:599,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.6,peoples:"(71)"},
+    {category:"lip liner",productId:"makeup36",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-powder-play-translucent-compact-28122598932563.jpg?v=1619116304",ptag:"Powder Play Translucent Compact",price:599,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(31)"},
+    {category:"lip liner",productId:"makeup37",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-arrested-for-overstay-waterproof-eyeliner-01-i-ll-be-black-black-12784884973651.jpg?v=1619101912",ptag:"Face Fwd >> Primer Stick",price:899,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(20)"},
+    {category:"kajal",productId:"makeup38",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-time-to-shine-lip-gloss-13905851580499.jpg?v=1619116676",ptag:"Time To Shine Lip Gloss",price:499,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.6,peoples:"(71)"},
+    {category:"liquid lipstick",productId:"makeup39",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/1_aab4d2fb-22ff-4c06-b906-608c50c2cce5.jpg?v=1639582378",ptag:"Stroke Of Genius Heavy-Duty Kohl",price:499,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(83)"},
+    {category:"liquid lipstick",productId:"makeup40", avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-face-fwd-primer-stick-13825409417299.jpg?v=1619116598",ptag:"Face Fwd >> Primer Stick",price:799,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.8,peoples:"(65)"},
+    {category:"liquid lipstick",productId:"makeup41",avatar:"https://cdn.shopify.com/s/files/1/0906/2558/products/1_944437bb-7ed0-423f-bdbf-153ad7fefcde.jpg?v=1652942992",ptag:"The Most Eligiblur Correcting Primer - 03",price:799,starimage:"https://in.sugarcosmetics.com/star_filled.png",rating:4.7,peoples:"(178)liquid lipstick)"}
+]  
+
+
+
+
+  var sort = document.querySelector("#sort");
+  sort.addEventListener("change",sortfunction)
+  function sortfunction(){
+  
+    if(sort.value=="All")
+    {
+        displayProduct(arr_of_obj)
+       
+    }
+     if(sort.value=="high"){
+        arr_of_obj.sort(function(a,b){
+            return b.price-a.price
+        })
+        displayProduct(arr_of_obj)
+        console.log(arr_of_obj)
+    }
+    if(sort.value=="low"){
+        arr_of_obj.sort(function(a,b){
+            return a.price-b.price
+        })
+        console.log(arr_of_obj)
+        displayProduct(arr_of_obj)
+    }
+    
+}
+
+
+
+
+
+
+var cart_array = JSON.parse(localStorage.getItem("added_data"))||[]
+
+
+
+function displayProduct(arr_of_obj){
+   
+    document.querySelector("#container").innerHTML=""
+    arr_of_obj.forEach(function(element){
+    var div = document.createElement("div")
+
+    var img  = document.createElement("img")
+    img.src=element.avatar
+    var ptag = document.createElement("p")
+    ptag.innerText=element.ptag
+    var price_p = document.createElement("p")
+    price_p.innerText= "₹" +" "+element.price
+    
+    var div2 = document.createElement("div")
+    var img2 = document.createElement("img")
+    img2.src = element.starimage
+    var span2 = document.createElement("span")
+    span2.innerText=element.rating
+    var span3 = document.createElement("span")
+    span3.innerText=element.peoples
+
+    var btn = document.createElement("button")
+    btn.innerText="Add To Cart"
+    btn.addEventListener("click",function(){
+     if(check_added(element.productId)===true)
+     {
+        alert("Added")
+        cart_array.push(element)
+        localStorage.setItem("added_data",JSON.stringify(cart_array))
+       
+     }
+     else{
+        alert("Cart already exists")
+     }
+    })
+    div2.append(img2,span2,span3)
+
+    div.append(img,ptag,price_p,div2,btn)
+    document.querySelector("#container").append(div)
+ })
+}
+
+displayProduct(arr_of_obj)
+
+var filter = document.querySelector("#filter")
+filter.addEventListener("change",function(element){
+    
+    if(filter.value==="All")
+        {
+            
+        }
+        else{
+        var filtered  = arr_of_obj.filter(function(element){
+            return element.category === filter.value
+            })
+            displayProduct(filtered)
+            
+     }
+    
+})  
+
+
+
+function check_added(id){
+ for(var i = 0; i<=cart_array.length-1; i++){
+    if(cart_array[i].productId===id){
+        return false
+    }
+ }
+ return true
+}
+
+
+</script>

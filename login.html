@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       form{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        border-radius: 10px;
+        padding: 20px;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       form>div{
+        display: flex;
+        flex-direction: row;
+       }
+       form>div>p{
+        margin-left: 160px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: -1px;
+        color: blue;
+       }
+       input[type="email"],input[type="password"]{
+        width: 100%;
+            margin-bottom: 10px;
+            resize: vertical;
+            box-sizing: border-box;
+            height: 40px;
+       }
+       #submit{
+        width: 40%;
+        font-weight: bold;
+        border: none;
+        background-color: black;
+        color: white;
+        height: 40px;
+        border-radius: 30px;
+       }
+       #CreateAccount{
+        width: 40%;
+        font-weight: bold;
+        border: 2px solid black;
+        background-color: white;
+        color: black;
+        height: 40px;
+        border-radius: 30px;
+       }
+       h3{
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+       #CreateAccount+p{
+        margin: auto;
+        text-decoration: underline;
+        color: blue;
+        margin-top: 20px;
+       }
+       hr{
+        border: 1px solid gray;
+       }
+
+  #navbar>div{
+        margin-left: 10px;
+    
+    }
+    #navbar>div:nth-child(1){
+        width: 18%;
+    }
+    #navbar>div:nth-child(1)>img{
+        width: 100%;
+        height: 100%;
+    }
+    #navbar{
+        display: flex;
+        height: 80px;
+        background-color: white;
+        width: 100%;
+    }
+    
+    #search{
+        display: flex;
+        width: 50%;
+        align-items: center;
+    }
+    #search>input{
+        border: none;
+        font-size: 22px;
+        background-color: rgb(238, 234, 229);
+        height: 60%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 80%;
+    }
+    #search>div{
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+       color: white;
+       background-color: black;
+       height: 60%;
+       width: 20%;
+       border-top-right-radius: 10px;
+       border-bottom-right-radius: 10px;
+       
+    }
+    #login{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:20% ;
+        
+       
+    }
+    #login>div>img{
+        height: 30px;
+        width: 30px;
+       
+    }
+    #login>a{
+        text-decoration: none;
+        font-size: 25px;
+        color: black;
+    }
+    #lowernav{
+        display: flex;
+        align-items: center;
+        width: 100%;
+       
+        height: 80px;
+        margin-top: 10px;
+    }
+    #lowernav>a{
+        background-color: rgb(244, 244, 238);
+        height: 30px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 7%;
+        border-radius: 5px;
+        margin-left: 20px;
+        color: black;
+      
+        text-decoration: none;
+       
+    }
+    #lowernav>a:hover{
+        background-color: rgb(238, 196, 43);
+        cursor: pointer;
+        height: 40px;
+        width: 7%;
+        
+    }
+    #mainnavbar{
+       margin-bottom: 50px;
+        width: 100%;
+        position: sticky;
+        background-color: white;
+        box-shadow: rgba(43, 43, 170, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        background-color: rgb(231, 228, 224);
+    }
+    
+        #wishlist{
+            display: flex;
+            width: 8%;
+            align-items: center;
+            justify-content: space-around;
+        }
+        #wishlist>img{
+            height: 30px;
+            width:30px;     
+        }
+        #wishlist>a>img{
+            height: 30px;
+            width: 30px;
+        }
+        #wishlist>a>img:hover{
+            height: 40px;
+            width: 40px;
+        }
+        #home>a>img{
+            height: 40px;
+            width: 40px;
+        }
+        #home{
+            display: flex;
+            margin-left: -10px;
+            align-items: center;
+        }
+        #home>a>img:hover{
+            height: 48px;
+            width: 48px;
+        }
+    </style>
+</head>
+<body>
+    
+        <div id="mainnavbar">
+            <div id="navbar">
+                <div>
+                    <img src="https://in.sugarcosmetics.com/desc-images/pride-logo-option.gif" alt="">
+                </div>
+                <div id="search">
+                    <input type="text" placeholder="search here">
+                    <div>Search</div>
+                </div>
+                <div id="login">
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/128/64/64572.png" alt=""a>
+                    </div>
+                    <a href="login.html">login</a>/<a href="resister.html">Resister</a>
+                </div>
+                <div id="home">
+                    <a href="index.html"><img src="https://t4.ftcdn.net/jpg/00/97/00/07/240_F_97000769_R4zepLTgmf8G22W7G2o8JA1HeiVK2CkK.jpg" alt=""></a>
+                </div>
+                <div id="wishlist">
+                
+                    <a href="wishlist.html"><img src="https://cdn-icons.flaticon.com/png/128/4240/premium/4240564.png?token=exp=1655445895~hmac=1d5ad7b52131a3bff8666b7cac4318b7" alt=""></a>
+                    <a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/128/253/253298.png" alt=""></a>
+                    <img src="https://cdn-icons-png.flaticon.com/128/879/879859.png" alt="">
+              
+                </div>
+            </div>
+            <div id="lowernav">
+                
+                    <a href="makeup.html"><div>MAKEUP</div></a>
+                    <a href="brushes.html"><div>BRUSHES</div></a>
+                    <a href="skincare.html"><div>SKINCARE</div></a>
+                    <a href="tending.html"><div>TENDING</div></a>
+                    <a href=""><div>BLOG</div></a>
+                    <a href="products.html"><div>OFFERS</div></a>
+                    <a href="store.html"> <div>STORE</div></a>
+                
+            </div>
+    </div>
+    <form action="">
+        <h4>Sign in to Sugarcosmetick?</h4>
+        <input type="email" id="email"  placeholder="Email Address*">
+        <input type="password" id="password" placeholder="Password*">
+        <div>
+        <input type="checkbox" id="keep" name="keep" placeholder="">
+        <label for="">Keep me signed in</label>
+        <p>Forget password?</p>
+        </div>
+        <input type="submit" id="submit" >
+        <hr>
+        <h4>New to Sugarcosmetick?</h4>
+        <button  id="CreateAccount" href="Signup.html" onclick="signupFun()" value="Create Account">Create Account</button>
+        <p>Term of Use & Privacy Policy</p>
+    </form>
+    <!-- <form>
+        <input id="email" placeholder="enter your email" type="email">
+        <input id="password" placeholder="enter your password" type="password">
+        <button id="singup">Sign in</button>
+    </form> -->
+</body>
+</html>
+<script>
+ 
+ 
+
+
+ let form =  document.querySelector("form")
+  let signin = JSON.parse(localStorage.getItem("usersignidata"))||[]
+ let signindata = JSON.parse( localStorage.getItem("userdata"))||[]
+  form.addEventListener("submit",function(event){
+    event.preventDefault()
+    let data  = {
+        email : form.email.value,
+        password:form.password.value,
+    }
+   if(chechksignin(data.email,data.password)===true){
+        signin.push(data)
+        localStorage.setItem("usersigndata",JSON.stringify(signin))
+        alert("login successsfull")
+        location.assign("homepage.html")
+       
+        
+   }
+   else{
+    alert("Wrong username or password")
+   }
+   
+  })
+function chechksignin(email,password){
+    let filtered = signindata.filter(function(element){
+        return element.email===email&&element.password===password
+    })
+    if(filtered.length>0){
+        return true
+    }
+    else{
+        return false
+    }
+}
+ 
+ 
+</script>
